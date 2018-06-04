@@ -14,7 +14,7 @@ goed afgewogen keuze te maken.
 De proposal gaat over een visualisatie die de gebruiker gemakkelijk en duidelijk verschillende vakantie bestemmingen laat vergelijken
 aan de hand van een wereldkaart, ondersteunt met verschillende grafieken over een aangeklikt land.
 
-![alt text](https://github.com/StevenProg/ProgrammeerProject/blob/master/Proposal_Idea.jpg)
+![alt text](https://github.com/StevenProg/ProgrammeerProject/blob/master/Proposal_Idea_new.jpg)
 
 
 #### Main features: 

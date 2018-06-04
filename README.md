@@ -11,3 +11,4 @@ goed afgewogen keuze te maken.
 ### Solution
 De proposal gaat over een visualisatie die de gebruiker gemakkelijk en duidelijk verschillende vakantie bestemmingen laat vergelijken
 aan de hand van een wereldkaart, ondersteunt met verschillende grafieken over een aangeklikt land.
+

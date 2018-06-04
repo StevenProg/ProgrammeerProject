@@ -1,5 +1,7 @@
 # Project Proposal
 
+## Destination Picker
+
 ### Problem Statement
 
 Een goede vakantiebestemming kiezen kan lastig zijn, zeker wanneer er een grote diversiteit is aan eisen. Het mag bijvoorbeeld niet
@@ -16,7 +18,7 @@ aan de hand van een wereldkaart, ondersteunt met verschillende grafieken over ee
 
 
 #### Main features: 
-- Ticket prijzen voor verschillende steden per land
+- Ticket prijzen vanaf Schiphol voor verschillende steden per land
 - Informatie over bepaalde variabelen, zoals temperatuur, per land
 
 #### Minimaal werkend product:
@@ -26,5 +28,16 @@ aan de hand van een wereldkaart, ondersteunt met verschillende grafieken over ee
 
 #### Data sources:
 - https://partners.skyscanner.net
-- 
+- https://developer.schiphol.nl/
+- http://www.weatherbase.com/weather/countryall.php3 (of vergelijkbaar)
+- source voor andere variabele?
 
+#### External components:
+- D3 Library, D3-Tip, D3-Queue
+- TopoJSON
+
+#### Lastigste deel:
+- Al de data verzamelen voor alle landen, oplossing: in plaats van de hele wereld -> een select aantal landen/enkel europa/enkel continenten?
+
+
+Steven Schoenmaker (10777679)

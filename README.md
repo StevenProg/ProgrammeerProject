@@ -13,3 +13,18 @@ De proposal gaat over een visualisatie die de gebruiker gemakkelijk en duidelijk
 aan de hand van een wereldkaart, ondersteunt met verschillende grafieken over een aangeklikt land.
 
 ![alt text](https://github.com/StevenProg/ProgrammeerProject/blob/master/Proposal_Idea.jpg)
+
+
+#### Main features: 
+- Ticket prijzen voor verschillende steden per land
+- Informatie over bepaalde variabelen, zoals temperatuur, per land
+
+#### Minimaal werkend product:
+- Klikken op verschillende landen, waardoor je informatie over het land krijgt
+
+### Prerequisites
+
+#### Data sources:
+- https://partners.skyscanner.net
+- 
+

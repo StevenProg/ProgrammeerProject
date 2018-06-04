@@ -36,8 +36,14 @@ aan de hand van een wereldkaart, ondersteunt met verschillende grafieken over ee
 - D3 Library, D3-Tip, D3-Queue
 - TopoJSON
 
+#### Vergelijkbare sites:
+- https://www.vliegtickets.nl/?gclid=EAIaIQobChMI-r3e6ZK62wIVBTPTCh0yvAYrEAAYASAAEgLDCvD_BwE&gclsrc=aw.ds&dclid=CJyN8OqSutsCFViWdwodlgUH9Q
+Het nadeel aan dit soort sites is het langzaam navigeren en informatie verwerving tussen verschillende landen
+
 #### Lastigste deel:
 - Al de data verzamelen voor alle landen, oplossing: in plaats van de hele wereld -> een select aantal landen/enkel europa/enkel continenten?
 
+#### Toevoegingen:
+- Favorieten bewaren -> snel vergelijken?
 
 Steven Schoenmaker (10777679)

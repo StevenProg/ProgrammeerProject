@@ -16,9 +16,6 @@ aan de hand van een kaart van Europa, ondersteunt met verschillende grafieken ov
 
 ![alt text](https://github.com/StevenProg/ProgrammeerProject/blob/master/Proposal_Europe.jpg)
 
-
-2 extra interactieve elementen horen in de afbeelding hierboven, een knop om het huidig gekozen land toe te voegen aan de groupedbarchart, en een dropdown menu om 1 van de gekozen landen uit de grouped barchart te verwijderen.
-
 #### Main features: 
 - Ticket prijzen vanaf Schiphol voor verschillende steden per land
 - Informatie over bepaalde variabelen, zoals temperatuur, per land

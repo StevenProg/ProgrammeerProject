@@ -12,9 +12,9 @@ goed afgewogen keuze te maken.
 
 ### Solution
 De proposal gaat over een visualisatie die de gebruiker gemakkelijk en duidelijk verschillende vakantie bestemmingen laat vergelijken
-aan de hand van een wereldkaart, ondersteunt met verschillende grafieken over een aangeklikt land.
+aan de hand van een kaart van Europa, ondersteunt met verschillende grafieken over een aangeklikt land.
 
-![alt text](https://github.com/StevenProg/ProgrammeerProject/blob/master/Proposal_Idea_new.jpg)
+![alt text](https://github.com/StevenProg/ProgrammeerProject/blob/master/Proposal_Europe.jpg)
 
 
 2 extra interactieve elementen horen in de afbeelding hierboven, een knop om het huidig gekozen land toe te voegen aan de groupedbarchart, en een dropdown menu om 1 van de gekozen landen uit de grouped barchart te verwijderen.
@@ -43,8 +43,7 @@ aan de hand van een wereldkaart, ondersteunt met verschillende grafieken over ee
 Het nadeel aan dit soort sites is het langzaam navigeren en informatie verwerving tussen verschillende landen
 
 #### Lastigste deel:
-- Al de data verzamelen voor alle landen, oplossing: in plaats van de hele wereld -> een select aantal landen/enkel europa/enkel continenten?
-
+- Al de data verzamelen voor de vliegtickets vanuit Schiphol (handmatig?)
 #### Toevoegingen:
 - Favorieten bewaren -> snel vergelijken?
 

@@ -21,7 +21,7 @@ die de reis maken, de data is beschikbaar in een TSV bestand, wat weer op een so
 
 ![alt text](https://github.com/StevenProg/ProgrammeerProject/blob/master/Images/Proposal_Europe_Diagram.jpg)
 
-### Technische overwiew
+### Technische overview
 
 Allereerst wordt een main-functie uitgevoerd die alle visualisaties 'leeg' weergeeft. De main functie gaat vervolgens bij onclick-events de visualisaties updaten die upgedate moeten worden.
 

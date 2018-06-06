@@ -23,10 +23,16 @@ die de reis maken, de data is beschikbaar in een TSV bestand, wat weer op een so
 
 ### Technische overview
 
-Allereerst wordt een main-functie uitgevoerd die alle visualisaties 'leeg' weergeeft. Hiervoor moet de data van de kaart van Europa worden ingeladen en alle namen van de landen in Europa De main functie gaat vervolgens bij onclick-events de visualisaties updaten die upgedate moeten worden.
+Allereerst wordt een main-functie uitgevoerd die alle visualisaties 'leeg' weergeeft. Hiervoor moet de data van de kaart van Europa worden ingeladen en alle namen van de landen in Europa. De main functie gaat vervolgens bij onclick-events de visualisaties updaten die upgedate moeten worden.
 
 - -Het vakje linksboven in de diagram- Hiervoor moeten de 2 onderdelen geprogrammeerd worden om tussen landen te wisselen; de kaart van Europa, met behulp van TopoJSON, en de zoekbalk met aanvulling. Bij het laden van de pagina moeten beide manieren 'leeg' geinitialiseerd worden. Als een land op één van beide manieren een land is gekozen moet dit land worden ingekleurd op de kaart, en -het vakje linksonder in de diagram- en -het vakje rechtsboven in de diagram- worden upgedate met behulp van een update functie. 
 
+- -Het vakje rechtsboven in de diagram- Voordat dit vakje invulling kan krijgen moet er eerst een land worden gekozen. Hij gaat dus 'leeg' geinitialiseerd worden, met een dropdown menu zonder data. Op het moment dat een ander land geselecteerd is zal de informatie over de goedkoopste reis naar het bepaald land bovenaan geschreven worden. Het dropdown menu krijgt ook een invulling met reisopties naar andere locaties van het gekozen land. Na elke switch van bestemmings-land zal de data van deze gehele visualisatie moet worden upgedate. Als een bepaalde locatie is gekozen door te klikken op een optie in het dropdown menu zal de grouped barchart worden upgedate.
+
+- -Het vakje linksonder in de diagram- Voordat dit vakje invulling kan krijgen moet er eerst een land worden gekozen. Hij gaat dus 'leeg' geinitialiseerd worden, met een grafiek zonder data. De X-as kan wel al worden geschreven, aangezien de maanden niet veranderen, de y-as kan wel variëren qua schaal. Op het moment dat een ander land geselecteerd is zal de grafiek invulling krijgen met weer data over het bepaalde land. Het is de bedoeling dat de grafiek een soortgelijke functionaliteit krijgt als de multiline van het vak data-processing, zoals de hover-over effects. Deze grafiek kan niet worden gebruikt om andere visualisaties te updaten.
+
+- -Het vakje rechtsonder in de diagram- Voordat dit vakje invulling kan krijgen moet er eerst een stad worden gekozen. Hij gaat dus 'leeg' geinitialiseerd worden, met een grafiek zonder data. De Y-as kan wel al worden geschreven, aangezien het een schaal van 0 naar 100% is, de x-as hangt af van de keuze van de gebruiker. Om het moment dat er een stad is gekozen in -het vakje rechtsboven in de diagram- zal de keuze worden toegevoegd aan de grouped barchart, ook als er al data in staat. Op deze manier kan de gebruiker de keuzes vergelijken. In de grouped barchart wordt dan de leeftijds-gerelateerde data ingeladen van de gekozen stad. Als er wordt geklikt 
+op een gekozen stad zal 
 
 ### D3 plug-in List
 

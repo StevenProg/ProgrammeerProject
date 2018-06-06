@@ -1,6 +1,6 @@
 # Design Document
 
-## Destination Picker
+## Destination Picker (Steven Schoenmaker 10777679)
 
 ### Data 
 

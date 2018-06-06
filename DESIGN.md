@@ -17,7 +17,7 @@ die de reis maken, de data is beschikbaar in een TSV bestand, wat weer op een so
 
 ### Diagram
 
-![alt text](https://github.com/StevenProg/ProgrammeerProject/blob/master/Proposal_Europe_Diagram.jpg)
+![alt text](https://github.com/StevenProg/ProgrammeerProject/blob/master/Images/Proposal_Europe_Diagram.jpg)
 
 ### Technische overwiew
 

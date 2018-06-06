@@ -12,3 +12,14 @@ figuren wil toevoegen met andere weerdate (sneeuw bijvoorbeeld) kan dit ook.
 die de reis maken, de data is beschikbaar in een TSV bestand, wat weer op een soortgelijke manier te verkrijgen is. Ik wil minstens 
 één van deze 2 datasets gebruiken voor in de grouped barchart.
 
+- Vliegtickets api? Anders auto -> benzine
+
+
+### Diagram
+
+![alt text](https://github.com/StevenProg/ProgrammeerProject/blob/master/Proposal_Europe_Diagram.jpg)
+
+### Technische overwiew
+
+
+

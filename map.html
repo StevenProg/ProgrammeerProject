@@ -1,0 +1,70 @@
+<!--
+Steven Schoenmaker 10777679
+Source : https://startbootstrap.com/template-overviews/grayscale/
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Steven Schoenmaker">
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+    <script src="https://d3js.org/queue.v1.min.js"></script>
+    <script src="https://d3js.org/topojson.v1.min.js"></script>
+    <script src="eu_map.js"></script>
+    <script src="temperature_lines.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="map.css">
+    <link rel="stylesheet" href="line.css">
+
+    <title>Netherlands temperatures and sunny days</title>
+
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Portfolio -->
+    <section class="content-section" id="portfolio">
+      <div class="container">
+        <div class="content-section-heading text-center">
+          <h3 class="text-secondary mb-0">Linked views visualization</h3>
+          <h2 class="mb-5">Sunny days and temperatues per province of the Netherlands</h2>
+
+          <form autocomplete="off" action="/action_page.php">
+            <div class="autocomplete">
+              <input id="myInput" type="text" name="myCountry" placeholder="Country">
+            </div>
+            <input type="submit">
+          </form>
+          <script>
+          autocomplete(document.getElementById("myInput"), countries);
+          </script>
+          <div id="mapcontainer"> 
+            <svg class="map" width ="1000" height ="700"></svg>
+          </div>
+          <div id="linescontainer"> 
+              <svg class="lines" width ="1000" height ="600"></svg>
+          </div>
+          <div class="source">
+              <a href="http://projects.knmi.nl/klimatologie/daggegevens/selectie.cgi">Data source: KNMI</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Footer -->
+    <footer class="footer text-center">
+      <div class="container">
+        <p class="text-muted small mb-0">Steven Schoenmaker (10777679) Dataprocessing Linked Views</p>
+      </div>
+    </footer>
+
+
+  </body>
+
+</html>

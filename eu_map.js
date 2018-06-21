@@ -10,7 +10,7 @@ Sources
 
 var eu_topo;
 var previousProvince = [];
-// var clickedProvince = ["Overijssel"];
+var clickedProvince = ["Sweden"];
 var projection = d3.geo.mercator()
     .scale(1)
     .translate([0, 0]);
@@ -27,13 +27,13 @@ var mapTip = d3.tip()
 
 // draws map of the netherlands including legend and year number 
 
-function mapGraph(dataTopo) {
+function mapGraph(dataTopo, dataLines) {
 
     function makeTitle() {
         d3.select('.map').select('g')
             .append('text')
             .attr('class', 'mapTitle')
-            .text('Average, maximum and minimum sunhours measured per province in the Netherlands in 1996')
+            // .text('European countries to choose from')
             .attr('text-anchor', 'middle')
             .attr('x', widthMap / 2 + 100)
             .attr('y', (heightMap / 2) - 355)
@@ -70,6 +70,74 @@ function mapGraph(dataTopo) {
         .style("fill", "green")
         // sets opacity, use a scale between 751 and 0 (instead of 1751 and 0)
         .attr("stroke-width", "1px")
+        // create mouse events 
+        .call(mapTip)
+        .on("mouseover", drawTooltip)
+        .on("mouseout", removeTooltip)
+        .on("click", onClick);
+        // hoover over function, shows province name and hours of sun
+        function drawTooltip() {
+            // currentProvince = d3.select(this).attr("class");
+            // hoursOfSun = d3.select(this).attr("sunHours");
+            // mapTip.show(currentProvince, hoursOfSun);
+            d3.select(this)
+                .style("fill", "crimson")
+        };
+        function removeTooltip() {
+            mapTip.hide()
+            d3.select(this)
+                .style("fill", "green");
+        }
 
-    
+        function onClick() {
+            console.log('this', this)
+            currentProvinceClick = d3.select(this).attr("class");
+            // prevent double date and data formatting
+
+
+            // colours the clicked crimson and gives them a yellow edge, update the multiline
+            if (clicked == 0) {
+                map.selectAll("path").style("fill", "green").style("stroke", "none");
+                d3.select(this)
+                    .style("stroke", "yellow")
+                    .style("stroke-width", "5px")
+                    .style("fill", "crimson");
+                updateGraph(dataLines, currentProvinceClick);
+                updatePie(dataAgeGlob[currentYear][currentProvinceClick])
+
+                clicked = 1;
+            }
+
+            // if the same province is clicked again, remove yellow lines
+            else if (currentProvinceClick == previousProvince) {
+                map.selectAll("path")
+                .style("stroke", "black")
+                .style("fill", "green")
+                .style("stroke-width", "1px")
+                clicked = 0;
+            }
+
+            // if a different province is clicked, with yellow lines being active, change them to the clicked province
+            else {
+                map.selectAll("path").style("fill", "green").style("stroke", "none");
+                console.log(this)
+                d3.select(this)
+                    .style("stroke", "yellow")
+                    .style("stroke-width", "5px")
+                    .style("fill", "crimson");
+                updateGraph(dataLines, currentProvinceClick);
+                updatePie(dataAgeGlob[currentYear][currentProvinceClick])
+ 
+                clicked = 1;
+            }
+            previousProvince = currentProvinceClick;
+        }    
+};
+
+function updateMap(countryNumber) {
+    var map = d3.select(".map");
+    map.selectAll("path").style("fill", "green").style("stroke", "none");
+    d3.select(map.selectAll("path")[0][countryNumber])
+        .style("stroke", "yellow")
+        .style("stroke-width", "5px")
 };

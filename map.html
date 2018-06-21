@@ -17,11 +17,12 @@ Source : https://startbootstrap.com/template-overviews/grayscale/
     <script src="https://d3js.org/topojson.v1.min.js"></script>
     <script src="eu_map.js"></script>
     <script src="temperature_lines.js"></script>
+    <script src="pie.js"></script>
     <script src="main.js"></script>
     <link rel="stylesheet" href="map.css">
     <link rel="stylesheet" href="line.css">
 
-    <title>Netherlands temperatures and sunny days</title>
+    <title>Destination Picker</title>
 
 
   </head>
@@ -32,24 +33,28 @@ Source : https://startbootstrap.com/template-overviews/grayscale/
     <section class="content-section" id="portfolio">
       <div class="container">
         <div class="content-section-heading text-center">
-          <h3 class="text-secondary mb-0">Linked views visualization</h3>
-          <h2 class="mb-5">Sunny days and temperatues per province of the Netherlands</h2>
+          <!-- <h3 class="text-secondary mb-0">Linked views visualization</h3> -->
+          <h2 class="mb-5">Destination Picker</h2>
 
-          <form autocomplete="off" action="/action_page.php">
-            <div class="autocomplete">
-              <input id="myInput" type="text" name="myCountry" placeholder="Country">
-            </div>
-            <input type="submit">
-          </form>
-          <script>
-          autocomplete(document.getElementById("myInput"), countries);
-          </script>
+          <div class="dropdowncontainer">
+						<select id="dropdown-countries" name="dropdown-countries" style="height:25px; width: 190px;" onchange="Class(this.id)">
+							<option id="0">Albania</option><option id="1">Aland</option><option id="2">Andorra</option><option id="3">Armenia</option><option id="4">Austria</option><option id="5">Azerbaijan</option><option id="6">Belgium</option><option id="9">Belarus</option><option id="8">Bosnia and Herz</option><option id="7">Bulgaria</option><option id="26">Croatia</option><option id="11">Cyprus</option><option id="13">Czech Republic</option><option id="15">Denmark</option><option id="17">Estonia</option><option id="18">Finland</option><option id="19">France</option><option id="22">Georgia</option><option id="14">Germany</option><option id="24">Greece</option><option id="25">Greenland</option><option id="27">Hungary</option><option id="30">Iceland</option><option id="29">Ireland</option><option id="31">Italy</option><option id="33">Kazakhstan</option><option id="34">Kosovo</option><option id="38">Latvia</option><option id="36">Lithuania</option><option id="37">Luxembourg</option><option id="Malta">Malta</option><option id="40">Moldavo</option><option id="42">Montenegro</option><option id="43">Netherlands</option><option id="44">Norway</option><option id="45">Poland</option><option id="46">Portugal</option><option id="47">Romania</option><option id="48">Russia</option><option id="50">Serbia</option><option id="52">Slovenia</option><option id="16">Spain</option><option id="53">Sweden</option><option id="10">Switzerland</option><option id="55">Turkey</option><option id="56">Ukraine</option><option id="21">United Kingdom</option>
+						</select>
+					</div> 
           <div id="mapcontainer"> 
             <svg class="map" width ="1000" height ="700"></svg>
           </div>
           <div id="linescontainer"> 
               <svg class="lines" width ="1000" height ="600"></svg>
           </div>
+          <div class="timeslider">
+              <input id="slider1" type="range" min="2012" max="2016" value="2016" step="1">
+              <h3 style="font-size: 18px"> Selected year: <span id="slider1-value"></span></h3>
+          </div> 
+          <div id="piecontainer"> 
+            <svg class="pie" width ="1000" height ="600"></svg>
+          </div>
+
           <div class="source">
               <a href="http://projects.knmi.nl/klimatologie/daggegevens/selectie.cgi">Data source: KNMI</a>
           </div>
@@ -60,7 +65,7 @@ Source : https://startbootstrap.com/template-overviews/grayscale/
   <!-- Footer -->
     <footer class="footer text-center">
       <div class="container">
-        <p class="text-muted small mb-0">Steven Schoenmaker (10777679) Dataprocessing Linked Views</p>
+        <p class="text-muted small mb-0">Steven Schoenmaker (10777679) Programmeer Project</p>
       </div>
     </footer>
 

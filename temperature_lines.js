@@ -48,20 +48,21 @@ function linesGraph(data) {
 
 
 // updates the graph after new dataset has been chosen
-function updateGraph(data, province, newProvince) {
+function updateGraph(data, province) {
 	var datasets = data[province];
 	var lines = d3.select(".lines")
-	// prevent double date and data formatting
-	if (newProvince == 1) { 
+
+	if (datasets.Maximum[0].Date == 20170101){
 		changeValues(datasets);
 	}
+
 	// select the part we want to apply our changes to
 	for (var set in datasets) {
 		lines.selectAll('.line.' + set)
 			.attr('d', line(datasets[set]));
 	};
 	// update title for new province
-	makeTitle(province, currentYear)
+	makeTitle(province)
 	};
 
 
@@ -70,8 +71,8 @@ function updateGraph(data, province, newProvince) {
 function drawInitialLines(data) {
 
 	// draw first graph with first province in data
-	var firstProvince = Object.keys(data)[0],
-		datasets = data[firstProvince];
+	var firstCountry = Object.keys(data)[0],
+		datasets = data[firstCountry];
 
 	// get sets for the legend
 	var sets = [];
@@ -80,7 +81,6 @@ function drawInitialLines(data) {
         };
 	// change data to correct type
 	changeValues(datasets);
-
 	// scale all datasets to fit in graph area
 	xAxis.domain(d3.extent(datasets['Minimum'], function(d) { 
 		return d.Date; 
@@ -137,7 +137,7 @@ function drawInitialLines(data) {
 			.attr('d', line);
 		i++;
 	};
-	makeTitle(firstProvince, currentYear);
+	makeTitle(firstCountry);
 
     var legend = lines.selectAll(".legend")
 		.data(sets)
@@ -278,7 +278,7 @@ function makeTitle(s, y) {
 	d3.select('.lines').select('g')
 		.append('text')
 		.attr('class', 'title')
-		.text('Average, maximum and minimum temperature measured in ' + s + ' in 1996')
+		.text('Average, maximum and minimum temperature measured in ' + s)
 		.attr('text-anchor', 'middle')
 		.attr('x', width / 2)
 		.attr('y', (margin / 2) - 20)
